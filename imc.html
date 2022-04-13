@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC Cálculo</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br>");
+        }
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+        function calculaImc(peso, altura){
+            return peso / (altura * altura);
+        }
+
+        var imcFlavio = calculaImc(73, 1.71);
+        var imcAmigo = calculaImc(68, 1.72);
+        var pesoTia = 50;
+        var alturaTia = 1.62;
+
+        var alturaUsuario = prompt("Digite sua altura ");
+        var pesoUsuario = prompt("Digite seu peso ");
+        var imcUsuario = calculaImc(pesoUsuario, alturaUsuario);
+        if (imcUsuario < 18.5){
+            mostra("Você está abaixo do recomendado.");
+        }
+        else if (imcUsuario > 35){
+            mostra("Você está acima do recomendado.")
+        }
+        else if (18.5 >= imcUsuario <=35){
+            mostra("Seu IMC está excelente.")
+        }
+
+
+
+    </script>
+</body>
+</html>
