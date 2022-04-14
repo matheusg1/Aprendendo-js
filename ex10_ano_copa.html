@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir anos da Copa</title>
+</head>
+<body>
+    <script>
+        var anoCopa = 1930;
+        const dataAtual = new Date();
+        const anoAtual = dataAtual.getFullYear();
+
+        var anoLimite = parseInt(prompt("Entre com o ano limite;"));
+
+        while (anoCopa <= anoLimite){
+            if (anoCopa <= anoAtual){
+                document.write("Houve copa em " + anoCopa + ".<br>");
+            }
+            else if (anoCopa > anoAtual){
+                document.write("Haverá copa em " + anoCopa + ".<br>");
+            }
+            anoCopa = anoCopa + 4;
+            if (anoCopa  >= (anoLimite + 4)){
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
