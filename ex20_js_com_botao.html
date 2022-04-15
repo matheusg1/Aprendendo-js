@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input name ="pwd" id="123">
+        <button name="btz">Exibir texto digitado</button>
+        <script>
+            var input = document.querySelector('input[id="123"]');
+
+            function exibeTexto() {
+
+                alert(input.value);
+            }
+
+            var botao1 = document.querySelector('button[name="btz"]');
+            botao1.onclick = exibeTexto;
+        </script>
+</body>
+</html>
