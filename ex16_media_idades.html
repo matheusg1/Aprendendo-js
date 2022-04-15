@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De for para while</title>
+</head>
+<body>
+    <script>
+    var inicio = 1;
+    var somaIdades = 0;
+    var totalFamiliares = parseInt(prompt("Quantidade de familiares?"));
+
+    while (inicio <= totalFamiliares){
+        var idade = parseInt(prompt("Informe a idade do " + inicio + "º familiar."));
+        somaIdades += idade;
+        inicio++;
+    }
+
+    var mediaFamiliar = somaIdades / totalFamiliares;
+
+    document.write("A média de idade dos seus familiares é " + mediaFamiliar + " anos.")
+    </script>
+</body>
+</html>
