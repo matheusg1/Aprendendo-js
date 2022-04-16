@@ -7,18 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    <input name ="pwd" id="123">
-        <button name="btz">Exibir texto digitado</button>
+    <input name="pwd" id="123">
+        <button id="bt1">Exibir texto digitado</button>
+        <!--<button id="bt2">Apagar campo</button>-->
         <script>
-            var input = document.querySelector('input[id="123"]');
-
+            var input1 = document.querySelector('input[id="123"]');
+            input1.focus();
+            
             function exibeTexto() {
 
-                alert(input.value);
+                alert(input1.value);
+                input1.value = "";
+                input1.focus();
             }
-
-            var botao1 = document.querySelector('button[name="btz"]');
+            botao1 = document.querySelector('button[id="bt1"]');
             botao1.onclick = exibeTexto;
+            
+            //var botao2 = document.querySelector('button[id="bt2"]');
+            //botao2.onclick = input.reset;
         </script>
 </body>
 </html>
